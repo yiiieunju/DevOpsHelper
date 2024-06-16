@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="com.ktds.faqnaservice.dto.FaqItemDTO"/>
+    <fullyQualifiedTypeName name="com.ktds.faqnaservice.dto.ResponseFaqDTO.ResponseFaqDTOBuilder"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;DevOpsHelper/settings.gradle&apos; to &apos;settings.yml&apos;" description="Rename resource &apos;settings.gradle&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="settings.gradle" name="settings.yml" stamp="1716723858779" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;DevOpsHelper/settings.yml&apos; to &apos;settings.gradle&apos;" description="Rename resource &apos;settings.yml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="settings.yml" name="settings.gradle" stamp="1716723874552" updateReferences="true"/>
+</session>

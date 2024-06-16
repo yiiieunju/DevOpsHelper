@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.buildship.ui.wizard.project.import">
+		<item key="project_location" value="/Users/ieunju/Documents/project/DevOpsHelper/DevOpsHelper/backend/faqna-service"/>
+		<item key="apply_working_sets" value="true"/>
+		<list key="working_sets">
+		</list>
+		<section name="ProjectImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="219"/>
+			<item key="DIALOG_Y_ORIGIN" value="61"/>
+			<item key="DIALOG_WIDTH" value="719"/>
+			<item key="DIALOG_HEIGHT" value="772"/>
+			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+		</section>
+	</section>
+	<section name="org.eclipse.buildship.ui.wizard.project.creation">
+		<item key="apply_working_sets" value="false"/>
+		<item key="project_location" value="/Users/ieunju/Documents/project/DevOpsHelper/DevOpsHelper/backend/DevOpsHelper"/>
+		<item key="use_default_location" value="true"/>
+		<list key="working_sets">
+		</list>
+		<section name="ProjectCreationWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="0"/>
+			<item key="DIALOG_Y_ORIGIN" value="0"/>
+			<item key="DIALOG_WIDTH" value="663"/>
+			<item key="DIALOG_HEIGHT" value="772"/>
+			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+		</section>
+	</section>
+</section>
