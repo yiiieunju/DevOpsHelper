@@ -15,14 +15,15 @@
 	</section>
 	<section name="org.eclipse.buildship.ui.wizard.project.creation">
 		<item key="apply_working_sets" value="false"/>
-		<item key="project_location" value="/Users/ieunju/Documents/project/DevOpsHelper/DevOpsHelper/backend/DevOpsHelper"/>
-		<item key="use_default_location" value="true"/>
+		<item key="use_default_location" value="false"/>
+		<item key="project_location" value="/Users/ieunju/Documents/project/DevOpsHelper/DevOpsHlpr/backend/DevOpsHlpr"/>
+		<item key="custom_location" value="/Users/ieunju/Documents/project/DevOpsHelper/DevOpsHlpr/backend"/>
 		<list key="working_sets">
 		</list>
 		<section name="ProjectCreationWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="0"/>
 			<item key="DIALOG_Y_ORIGIN" value="0"/>
-			<item key="DIALOG_WIDTH" value="663"/>
+			<item key="DIALOG_WIDTH" value="637"/>
 			<item key="DIALOG_HEIGHT" value="772"/>
 			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 		</section>

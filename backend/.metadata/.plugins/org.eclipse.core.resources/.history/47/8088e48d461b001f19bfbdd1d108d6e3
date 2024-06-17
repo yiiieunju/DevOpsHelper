@@ -1,9 +1,0 @@
-package com.ktds.faqnaservice.dto;
-
-import java.util.List;
-
-public class ResponseFaqDTO {
-	private String code;
-	private String message;
-	private FaqItemDTO faqItems;
-}

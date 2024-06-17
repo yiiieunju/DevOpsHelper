@@ -1,8 +1,0 @@
-package com.ktds.faqnaservice.dto;
-
-@Builder
-@Getter
-public class ResponseDTO {
-	private String code;
-	private String message;
-}

@@ -13,4 +13,4 @@ plugins {
 }
 
 rootProject.name = 'DevOpsHelper'
-include('lib', 'faq-service-module')
+include 'faq-service-module'

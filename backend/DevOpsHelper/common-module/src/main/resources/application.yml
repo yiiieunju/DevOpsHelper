@@ -1,0 +1,5 @@
+# spring.application.name=common-module
+
+#포트
+server:
+  port: 8081
