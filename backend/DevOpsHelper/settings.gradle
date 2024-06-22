@@ -14,3 +14,5 @@ plugins {
 
 rootProject.name = 'DevOpsHelper'
 include 'faq-service-module'
+include 'common-module'
+include 'authentication-server'

@@ -10,6 +10,12 @@ repositories {
 
 bootJar.enabled = false
 
+allprojects{
+	tasks.withType(JavaCompile) {
+    	options.encoding = 'UTF-8'
+	}
+}
+
 subprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
     group 'com.ktds.devopshelper'
     version '0.0.1-SNAPSHOT'
@@ -33,14 +39,18 @@ subprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
     dependencies { // 모든 하위 모듈에 추가 될 의존성 목록
 	 	//implementation project(':common-module');
 		//web
-		implementation 'org.springframework.boot:spring-boot-starter-web'
-		implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+		compileOnly 'org.springframework.boot:spring-boot-starter-web'
+		compileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
 		//jdbc
 		implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
 		implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.8'
 		
 		//lombok
 		compileOnly 'org.projectlombok:lombok'
+		
+		//validation
+	    implementation 'org.springframework.boot:spring-boot-starter-validation'
+	
 		//test
 		developmentOnly 'org.springframework.boot:spring-boot-devtools'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -53,5 +63,17 @@ subprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
 
 	test {
         useJUnitPlatform()
+    }
+}
+
+project(':faq-service-module') {
+    dependencies {
+        implementation project(':common-module')
+    }
+}
+
+project(':authentication-server') {
+    dependencies {
+        implementation project(':common-module')
     }
 }
