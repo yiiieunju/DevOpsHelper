@@ -1,0 +1,2 @@
+encrypt:
+  key: SECU100  # 암호화 설정 시 진행되는 키

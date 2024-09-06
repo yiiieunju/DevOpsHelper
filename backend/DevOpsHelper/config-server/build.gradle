@@ -1,0 +1,46 @@
+/*plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.1'
+	id 'io.spring.dependency-management' version '1.1.5'
+}
+
+group = 'com.ktds.devopshelper.configserver'
+version = '0.1'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+*/
+
+ext {
+	set('springCloudVersion', "2023.0.2")
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.cloud:spring-cloud-config-server'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	
+	//bootstrap을 통해 암복호화 기능에 필요한 라이브러리 의존성 추가
+	implementation  'org.springframework.security:spring-security-rsa'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+}
+
+//추가하지 않으면 @EnableConfigServer 어노테이션을 찾을 수 없다.
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

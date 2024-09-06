@@ -18,7 +18,7 @@ import lombok.NonNull;
 @Getter
 public class FaqItem {
 	@Id
-	@Column(name= "Id", length = 100)
+	@Column(name= "ID", length = 100)
 	private String id;
 	
 	@Column(name= "USER_ID", length = 100)
@@ -31,8 +31,8 @@ public class FaqItem {
 	@Column(name= "SYSTEM_CATEGORY", length = 200)
 	private String systmCategory;
 	
-	@Column(name= "FST_CATEGORY", length = 200)
-	private String fstCategory;
+	@Column(name= "TAG", length = 200)
+	private String tag;
 	
 	@Column(name= "TITLE", length = 1000)
 	@NonNull
@@ -52,10 +52,10 @@ public class FaqItem {
 	@Column(name= "CHG_DTS", length = 25)
 	private String chgDate;
 	
-	public void update(String userId, String systmCategory, String fstCategory, String title, String content, long retvCount, String regDate, String chgDate) {
+	public void update(String userId, String systmCategory, String tag, String title, String content, long retvCount, String regDate, String chgDate) {
         this.userId = userId;
         this.systmCategory = systmCategory;
-        this.fstCategory = fstCategory;
+        this.tag = tag;
         this.title = title;
         this.content = content;
         this.retvCount = retvCount;

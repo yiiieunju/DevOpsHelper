@@ -1,0 +1,19 @@
+#spring.application.name=config-server
+
+#application.yml파일이 들어있던 resources안에 config폴더 안에 있는 설정파일들을 참조하겠다는 의미.
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath://config  #설정파일들이 들어갈 위치 
+          #search-locations: file:///Users/ieunju/Documents/project/DevOpsHelper/DevOpsHelper/backend/DevOpsHelper/config-server/src/main/resources/config
+        encrypt:
+          enabled:  false
+server:
+  port: 8080

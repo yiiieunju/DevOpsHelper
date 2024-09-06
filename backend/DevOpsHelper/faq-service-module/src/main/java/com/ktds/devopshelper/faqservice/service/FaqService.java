@@ -53,7 +53,7 @@ private final FaqItemRepository faqItemRepository;
 				.userId(faqItemDTO.getUserId())
 				.devOpsDivCd(faqItemDTO.getDevOpsDivCd())
 				.systmCategory(faqItemDTO.getSystmCategory())
-				.fstCategory(faqItemDTO.getFstCategory())
+				.tag(faqItemDTO.getTag())
 				.title(faqItemDTO.getTitle())
 				.content(faqItemDTO.getContent())
 				.retvCount(faqItemDTO.getRetvcount())
@@ -71,7 +71,7 @@ private final FaqItemRepository faqItemRepository;
 		
 		FaqItem item= faqItemRepository.findById(faqItemDTO.getId()).orElseThrow(() 
 				-> new IllegalArgumentException("해당 게시이 없습니다. id= " + id));
-		item.update(faqItemDTO.getUserId(),faqItemDTO.getSystmCategory(),faqItemDTO.getFstCategory(),faqItemDTO.getTitle(),
+		item.update(faqItemDTO.getUserId(),faqItemDTO.getSystmCategory(),faqItemDTO.getTag(),faqItemDTO.getTitle(),
 				faqItemDTO.getContent(), faqItemDTO.getRetvcount(),faqItemDTO.getRegDate()
 				,date);
 	}

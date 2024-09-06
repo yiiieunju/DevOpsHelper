@@ -1,0 +1,44 @@
+#로그설
+logging:
+  file:
+    name: logs/api-local5.log
+    max-size: 500MB
+    max-history: 10
+  level:
+    root: info
+    "[com.ktds.faqnaservice]": debug
+   
+# DB
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/faqna-service
+    username: root
+    password: '{cipher}8ac672debde761d00aa61b5c1026cc368165fd629e422b4595056f78622e2c7a'
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB106Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        "[format_sql]": true
+
+#포트
+# server:
+#   port: 8080 
+  
+#spring doc swagger
+springdoc:
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+    display-query-params-without-oauth2: true
+
+token:
+  expiration_time: 86400000
+  secret: SECU100

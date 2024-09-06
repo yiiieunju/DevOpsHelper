@@ -4,4 +4,14 @@
     <fullyQualifiedTypeName name="com.ktds.faqnaservice.dto.FaqItemDTO"/>
     <fullyQualifiedTypeName name="com.ktds.faqnaservice.dto.ResponseFaqDTO.ResponseFaqDTOBuilder"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonInclude"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonInclude.Include"/>
+    <fullyQualifiedTypeName name="com.ktds.devopshelper.authentication.dto.ResponseAccountDTO.ResponseAccountDTOBuilder"/>
+    <fullyQualifiedTypeName name="com.auth0.jwt.JWT"/>
+    <fullyQualifiedTypeName name="com.ktds.devopshelper.authentication.dto.AccountDTO"/>
+    <fullyQualifiedTypeName name="org.apache.commons.lang.time.DateUtils"/>
+    <fullyQualifiedTypeName name="com.ktds.devopshelper.authentication.util.JWTUtil"/>
+    <fullyQualifiedTypeName name="com.ktds.devopshelper.commonservice.dto.ResponseDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.validation.FieldError"/>
+    <fullyQualifiedTypeName name="com.ktds.devopshelper.commonservice.dto.ResponseDTO.ResponseDTOBuilder"/>
 </qualifiedTypeNameHistroy>

@@ -1,14 +1,12 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.3.0'
+    id 'org.springframework.boot' version '3.3.1'
     id 'io.spring.dependency-management' version '1.1.5'
 }
 
 repositories {
     mavenCentral()
 }
-
-bootJar.enabled = false
 
 allprojects{
 	tasks.withType(JavaCompile) {
@@ -22,7 +20,7 @@ subprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
     sourceCompatibility = '17'
 
     apply plugin: 'java'
-    apply plugin: 'java-library'
+    //apply plugin: 'java-library'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
@@ -35,28 +33,36 @@ subprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
     repositories {
         mavenCentral()
     }
+    
+    //spring cloud 라이브러리에 대한 공통버전 추
+    dependencyManagement {
+	    imports {
+	        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:2023.0.3'
+	    }
+	}
+
 
     dependencies { // 모든 하위 모듈에 추가 될 의존성 목록
-	 	//implementation project(':common-module');
-		//web
-		compileOnly 'org.springframework.boot:spring-boot-starter-web'
-		compileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
-		//jdbc
-		implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
-		implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.8'
+		//validation 
+		implementation 'org.springframework.boot:spring-boot-starter-validation'		
 		
 		//lombok
 		compileOnly 'org.projectlombok:lombok'
-		
-		//validation
-	    implementation 'org.springframework.boot:spring-boot-starter-validation'
+	    
+	    //spring doc library
+	    implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.2'
 	
 		//test
 		developmentOnly 'org.springframework.boot:spring-boot-devtools'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		
 		//annotation
 		annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 		annotationProcessor 'org.projectlombok:lombok'
+		
+		//spring cloud
+		implementation 'org.springframework.cloud:spring-cloud-starter-config' //config와 연동하기위한 라이브러리에대한 의존
+		implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap' // bootstrap.yml파일을 사용하기위한 라이브러
 		
 		testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     }
@@ -69,11 +75,34 @@ subprojects { // 모든 하위 모듈들에 이 설정을 적용합니다.
 project(':faq-service-module') {
     dependencies {
         implementation project(':common-module')
+        
+        //web
+		implementation 'org.springframework.boot:spring-boot-starter-web'
+		implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        
+        //jdbc
+		implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.1.2'
+		implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.8'
+        
     }
 }
 
-project(':authentication-server') {
+project(':common-module') {
     dependencies {
-        implementation project(':common-module')
+        
+        //web
+		implementation 'org.springframework.boot:spring-boot-starter-web'
+		implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        
+        //jdbc
+		implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.1.2'
+		implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.8'
+        
     }
 }
+
+//project(':authentication-server') {
+//    dependencies {
+//        implementation project(':common-module')
+//    }
+//}

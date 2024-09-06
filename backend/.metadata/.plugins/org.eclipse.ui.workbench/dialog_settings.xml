@@ -34,10 +34,10 @@
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 	<section name="PropertyDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="639"/>
-		<item key="DIALOG_Y_ORIGIN" value="-109"/>
-		<item key="DIALOG_WIDTH" value="643"/>
-		<item key="DIALOG_HEIGHT" value="540"/>
+		<item key="DIALOG_X_ORIGIN" value="477"/>
+		<item key="DIALOG_Y_ORIGIN" value="96"/>
+		<item key="DIALOG_WIDTH" value="645"/>
+		<item key="DIALOG_HEIGHT" value="699"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 </section>
