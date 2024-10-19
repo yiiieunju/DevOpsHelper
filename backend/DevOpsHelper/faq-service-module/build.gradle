@@ -19,10 +19,10 @@ dependencyManagement {
 }
 
 dependencies {
-	//implementation project(':common-module')
 	//spring cloud
 		implementation 'org.springframework.cloud:spring-cloud-starter-config' //config와 연동하기위한 라이브러리에대한 의존
 		implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap' // bootstrap.yml파일을 사용하기위한 라이브러
+		
 		
 		implementation 'org.springframework.boot:spring-boot-starter-actuator'
 }

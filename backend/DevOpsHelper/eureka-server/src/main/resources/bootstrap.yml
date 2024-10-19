@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: local
+  cloud:
+    config:
+      uri: http://localhost:8081
+    loadbalancer: # 부하분산을 위한 기능인데 아직 사용하지 않을 예/
+      ribbon:
+        enabled: false

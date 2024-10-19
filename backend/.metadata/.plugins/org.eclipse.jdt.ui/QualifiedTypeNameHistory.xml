@@ -14,4 +14,7 @@
     <fullyQualifiedTypeName name="com.ktds.devopshelper.commonservice.dto.ResponseDTO"/>
     <fullyQualifiedTypeName name="org.springframework.validation.FieldError"/>
     <fullyQualifiedTypeName name="com.ktds.devopshelper.commonservice.dto.ResponseDTO.ResponseDTOBuilder"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest.WebEnvironment"/>
+    <fullyQualifiedTypeName name="org.springframework.test.web.servlet.setup.MockMvcBuilders"/>
+    <fullyQualifiedTypeName name="org.apache.commons.lang.exception.ExceptionUtils"/>
 </qualifiedTypeNameHistroy>

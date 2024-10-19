@@ -43,14 +43,14 @@ private final FaqItemRepository faqItemRepository;
 	}
 	
 	//insert
-	public void insertFaqItem(FaqItemDTO faqItemDTO) {
+	public void insertFaqItem(FaqItemDTO faqItemDTO, String userId) {
 		System.out.println("asd");
 		SimpleDateFormat form = new SimpleDateFormat("yyyyyMMddHHmmss");
 		String date = form.format(new Date());	
 		
 		FaqItem item = FaqItem.builder()
 				.id(faqItemDTO.getId())
-				.userId(faqItemDTO.getUserId())
+				.userId(userId)
 				.devOpsDivCd(faqItemDTO.getDevOpsDivCd())
 				.systmCategory(faqItemDTO.getSystmCategory())
 				.tag(faqItemDTO.getTag())
@@ -71,7 +71,7 @@ private final FaqItemRepository faqItemRepository;
 		
 		FaqItem item= faqItemRepository.findById(faqItemDTO.getId()).orElseThrow(() 
 				-> new IllegalArgumentException("해당 게시이 없습니다. id= " + id));
-		item.update(faqItemDTO.getUserId(),faqItemDTO.getSystmCategory(),faqItemDTO.getTag(),faqItemDTO.getTitle(),
+		item.update(faqItemDTO.getSystmCategory(),faqItemDTO.getTag(),faqItemDTO.getTitle(),
 				faqItemDTO.getContent(), faqItemDTO.getRetvcount(),faqItemDTO.getRegDate()
 				,date);
 	}

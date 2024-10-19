@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="dev"/>
+		<item key="selection" value="add"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="add"/>
+			<item value="token"/>
+			<item value="springCloudVersion"/>
+			<item value="annotationProcessor &apos;org.projectlombok:lombok&apos;"/>
+			<item value="&apos;org.springframework.cloud:spring-cloud-starter&apos;"/>
+			<item value="starter"/>
+			<item value="DataBuffer"/>
+			<item value="8081"/>
+			<item value="devt"/>
+			<item value="test"/>
 			<item value="dev"/>
 			<item value="500"/>
 			<item value="asd"/>
 			<item value="ck"/>
 			<item value="8080"/>
-			<item value="pringframework.boot:spring-boot-starter-validation"/>
-			<item value="implementation"/>
-			<item value="config"/>
-			<item value="cloud"/>
-			<item value="apiresponse"/>
-			<item value="mapp"/>
-			<item value="RequestMethod"/>
-			<item value="hiber"/>
-			<item value="ResponseDTO"/>
-			<item value="request"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1104"/>
-		<item key="DIALOG_Y_ORIGIN" value="353"/>
+		<item key="DIALOG_X_ORIGIN" value="990"/>
+		<item key="DIALOG_Y_ORIGIN" value="-91"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="400"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>

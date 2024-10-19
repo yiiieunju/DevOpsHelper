@@ -1,0 +1,27 @@
+//repositories {
+//	mavenCentral()
+//	maven { url 'https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates' }
+//}
+
+ext {
+	set('springCloudVersion', "2023.0.3")
+}
+
+dependencies {
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
+	
+	implementation 'org.springframework.cloud:spring-cloud-starter-config' //config와 연동하기위한 라이브러리에대한 의존
+	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap' // bootstrap.yml파일을 사용하기위한 라이브러
+	
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

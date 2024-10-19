@@ -26,6 +26,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -79,10 +80,13 @@ public class FaqController {
 			@ApiResponse(responseCode = "501", description = "API EXCEPTION")
 	})
 	@RequestMapping(value="/add", method=RequestMethod.POST) // @PostMapping("path"), RequestMapping 차이?
-	public ResponseEntity<ResponseDTO> add(@Valid @RequestBody FaqItemDTO faqItemDTO) throws Exception{
+	public ResponseEntity<ResponseDTO> add(
+			HttpServletRequest request,
+			@Valid @RequestBody FaqItemDTO faqItemDTO) throws Exception{
 		ResponseDTO.ResponseDTOBuilder responseBuilder = ResponseDTO.builder();
 		
-		
+		String userId = request.getHeader("userId").toString().replace("[", "").replace("]", "");
+		log.info("userId = {}", userId);
 		//인위적인 에러 체크
 //		try {
 //			Integer.parseInt("test");
@@ -91,7 +95,7 @@ public class FaqController {
 //		}
 		System.out.print("asdasdasd");
 		//insert
-		faqService.insertFaqItem(faqItemDTO);
+		faqService.insertFaqItem(faqItemDTO, userId);
 		log.debug("request add item id = {}", faqItemDTO.getId());
 		
 		responseBuilder.code("200").message("success");

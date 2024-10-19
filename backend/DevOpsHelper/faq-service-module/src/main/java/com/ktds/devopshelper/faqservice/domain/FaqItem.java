@@ -52,8 +52,7 @@ public class FaqItem {
 	@Column(name= "CHG_DTS", length = 25)
 	private String chgDate;
 	
-	public void update(String userId, String systmCategory, String tag, String title, String content, long retvCount, String regDate, String chgDate) {
-        this.userId = userId;
+	public void update(String systmCategory, String tag, String title, String content, long retvCount, String regDate, String chgDate) {
         this.systmCategory = systmCategory;
         this.tag = tag;
         this.title = title;

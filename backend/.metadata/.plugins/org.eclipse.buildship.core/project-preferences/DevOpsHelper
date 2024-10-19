@@ -1,12 +1,12 @@
 #
-#Thu Sep 05 01:47:54 KST 2024
-derivedResources=.gradle\:build\:common-module/build\:config-server/build\:faq-service-module/build
+#Mon Oct 14 02:26:00 KST 2024
+derivedResources=.gradle\:build\:authentication-server/build\:common-module/build\:config-server/build\:eureka-server/build\:faq-service-module/build\:gateway-server/build
 linkedResources=
 classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
 managedNatures=org.eclipse.jdt.core.javanature
 buildDir=build
 managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
 buildScriptPath=build.gradle
-subprojectPaths=common-module\:config-server\:faq-service-module
+subprojectPaths=authentication-server\:common-module\:config-server\:eureka-server\:faq-service-module\:gateway-server
 hasAutoBuildTasks=false
 gradleVersion=8.1.1

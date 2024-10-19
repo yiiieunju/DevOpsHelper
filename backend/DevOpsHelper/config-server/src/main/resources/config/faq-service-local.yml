@@ -1,32 +1,22 @@
 #로그설
 logging:
   file:
-    name: logs/api-local5.log
+    name: logs/api-local.log
     max-size: 500MB
     max-history: 10
   level:
     root: info
-    "[com.ktds.faqnaservice]": debug
+    com.ktds.devopshelper.faqnaservice: debug
    
 # DB
 spring:
-  datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/faqna-service
-    username: root
-    password: '{cipher}8ac672debde761d00aa61b5c1026cc368165fd629e422b4595056f78622e2c7a'
-  jpa:
-    database-platform: org.hibernate.dialect.MariaDB106Dialect
-    hibernate:
-      ddl-auto: create
-    show-sql: true
-    properties:
-      hibernate:
-        "[format_sql]": true
+  config:
+    import:
+      - classpath:/config/datasource-local.yml
 
 #포트
-# server:
-#   port: 8080 
+server:
+  port: 0
   
 #spring doc swagger
 springdoc:
@@ -42,3 +32,14 @@ springdoc:
 token:
   expiration_time: 86400000
   secret: SECU100
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
+    # instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    server-url:
+      defaultZone:  http://localhost:8761/eureka

@@ -13,10 +13,6 @@ public class FaqItemDTO {
 	@Schema(description = "SEQ", example = "TESTSEQ")
 	private String Id;
 	
-	@Schema(description = "등록인ID", example = "82224036")
-	@NotBlank(message = "아이디는 필수 입력 값입니다.")
-	private String userId;
-	
 	@Schema(description = "개발운영구분", example = "개발")
 	private String devOpsDivCd;
 	

@@ -1,12 +1,12 @@
 #로그설
 logging:
   file:
-    name: logs2/api.log
+    name: logs3/api.log
     max-size: 500MB
     max-history: 10
   level:
     root: info
-    "[com.ktds.faqnaservice]": debug
+    com.ktds.devopshelper.faqnaservice: debug
    
 # DB
 spring:

@@ -1,0 +1,30 @@
+logging:
+  file:
+    name: logs/gateway.log
+    max-size: 500MB
+    max-history: 10
+  level:
+    root: info
+    com.ktds.devopshelper.gatewayserver: debug
+
+# proxy 처리    
+spring:
+  config:
+    import:
+      - classpath:/config/datasource-local.yml
+  cloud:
+    gateway:
+      routes:
+      - id: faq-service #라우팅 구별을 위한 식별 id
+        uri: lb://faq-service #이동할 마이크로서비스 명
+        predicates:
+        - Path=/faq/** # 실제 요청들어온 uri 요청
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
